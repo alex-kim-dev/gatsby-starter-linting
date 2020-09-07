@@ -1,9 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby starter`,
-    description: `A starter with a single hello world component and some code quality checking tools`,
-    author: `Alex Kim`,
-  },
+  siteMetadata: {},
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
