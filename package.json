@@ -16,7 +16,10 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --check **/*.{json,yml,yaml,md}",
+    "format:write": "prettier --write **/*.{json,yml,yaml,md}",
+    "lint": "eslint --ext js,jsx .",
+    "lint:fix": "eslint --fix --ext js,jsx .",
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
