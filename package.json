@@ -22,7 +22,8 @@
     "lint:fix": "eslint --fix --ext js,jsx .",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "gatsby",
@@ -50,15 +51,19 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "jest-preset-gatsby": "^1.0.79",
     "lint-staged": "^10.3.0",
     "prettier": "2.1.0",
-    "prettier-plugin-package": "^1.0.0"
+    "prettier-plugin-package": "^1.0.0",
+    "react-test-renderer": "^16.13.1"
   },
   "husky": {
     "hooks": {
@@ -66,7 +71,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --fix",
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "jest --findRelatedTests"
+    ],
     "*.{json,yml,yaml,md}": "prettier --write"
   }
 }
