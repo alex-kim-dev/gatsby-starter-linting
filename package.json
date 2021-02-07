@@ -61,7 +61,7 @@
     "jest": "^26.4.2",
     "jest-preset-gatsby": "^1.0.79",
     "lint-staged": "^10.3.0",
-    "prettier": "2.1.0",
+    "prettier": "2.2.1",
     "prettier-plugin-package": "^1.0.0",
     "react-test-renderer": "^16.13.1"
   },
