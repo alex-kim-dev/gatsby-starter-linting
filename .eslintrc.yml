@@ -6,7 +6,6 @@ extends:
   - plugin:jest/recommended
   - plugin:jest/style
   - plugin:prettier/recommended
-  - prettier/react
 
 env:
   browser: true
