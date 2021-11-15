@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint-test-build:
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,19 +18,32 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-          cache: 'npm'
+          node-version: '14.15'
+          cache: npm
 
       - name: Install
         run: npm ci
 
-      - name: Lint
+      - name: Test
         run: |
           npm run lint
-          npm run format
+          npm test
 
-      - name: Test
-        run: npm test
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.15'
+          cache: npm
+
+      - name: Install
+        run: npm ci
 
       - name: Build
         run: npm run build
