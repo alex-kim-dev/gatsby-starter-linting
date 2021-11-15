@@ -6,6 +6,8 @@ import HomePage from './index';
 describe('Home page', () => {
   it('renders correctly', () => {
     render(<HomePage />);
-    expect(screen.getByText('Hello world!')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      'Hello world!',
+    );
   });
 });
