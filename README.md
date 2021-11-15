@@ -1,4 +1,4 @@
-[![Depfu](https://badges.depfu.com/badges/8ce166cbc65755c8e6edeb532ab737e1/overview.svg)](https://depfu.com/github/Alex-K1m/gatsby-starter-linting?project_id=22121)
+[![Depfu](https://badges.depfu.com/badges/8ce166cbc65755c8e6edeb532ab737e1/overview.svg)](https://depfu.com/github/alex-kim-dev/gatsby-starter-linting?project_id=22121)
 
 # Gatsby starter with linting
 
